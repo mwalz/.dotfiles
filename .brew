@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+brew install git bash-completion mongo redis minicom tree closure-compiler

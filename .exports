@@ -1,0 +1,101 @@
+# Export Settings
+#################
+
+# Prefer US English and use UTF-8
+#export LC_ALL="en_US.UTF-8"
+export LC_ALL="C"
+export LANG="en_US"
+# Add Homebrew paths
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+#export PATH=~/bin:$PATH
+
+# Make emacs the default editor
+export EDITOR="emacs --quick"
+
+# Don't clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Bash History Options
+export HISTSIZE=1000000
+export HISTCONTROL='ignoreboth'
+export HISTIGNORE='&:ls:[bf]g:exit'
+#export HISTIGNORE="cd *:[bf]g:exit:pwd:date:clear:mount:umount"
+export HISTTIMEFORMAT='%b %d %H:%M:%S: '
+shopt -s histappend
+set cmdhist
+
+export LESS="--RAW-CONTROL-CHARS"
+export CLICOLOR=1
+
+# Use colors for less, man, etc.
+[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
+
+export GREP_OPTIONS="--color=auto"
+
+# Some GNU Settings
+export GNUTERM=x11
+
+# Third party tools directory
+export TOOL_DIR=~/work/tools
+
+# Java Home Setup
+export JAVA_HOME="`/usr/libexec/java_home`"
+
+# Clojure Setup
+export PATH=$PATH:$HOME/.cljr/bin
+
+# SBT Setup
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2048M"
+
+# Scala Setup
+export SCALA_HOME=$TOOL_DIR/scala/current
+export PATH=$PATH:$SCALA_HOME/bin
+
+# Akka Setup
+export AKKA_HOME=$TOOL_DIR/akka/current
+export PATH=$PATH:$AKKA_HOME/bin
+
+# Play Setup
+export PLAY_HOME=$TOOL_DIR/play/current
+export PATH=$PATH:$PLAY_HOME
+
+# Active MQ Setup
+export ACTIVEMQ_HOME=$TOOL_DIR/activemq/current
+export PATH=$PATH:$ACTIVEMQ_HOME
+
+# Mallet Setup
+export MALLET_HOME=$TOOL_DIR/mallet/current
+export PATH=$PATH:$MALLET_HOME/bin
+
+# Hadoop Setup
+export HADOOP_INSTALL=$TOOL_DIR/hadoop/current
+export PATH=$PATH:$HADOOP_INSTALL/bin
+
+# Haskell Setup
+export PATH=$PATH:$HOME/Library/Haskell/bin
+
+# NVM and Node
+export NVM_HOME=~/.nvm
+export PATH=$PATH:$NVM_HOME/bin
+
+# Google Closure Compiler
+export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130411/libexec
+
+# Convey Setup
+export SCALABHA_DIR=$HOME/Work/projects/libraries/Scalabha
+export PATH=$PATH:$SCALABHA_DIR/bin
+export CONVEY_DIR=$HOME/Work/projects/converseon/convey
+export PATH=$PATH:$CONVEY_DIR/bin
+
+# Setup Amazon EC2 Command-Line Tools
+export AWS_RDS_HOME=$TOOL_DIR/RDSCli-1.8.002
+export PATH=$PATH:$AWS_RDS_HOME/bin
+# export EC2_HOME=~/.ec2
+# export PATH=$PATH:$EC2_HOME/bin
+# export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+# export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+
+# MacPorts Installer additions
+export MANPATH=/opt/local/share/man:$MANPATH
+export PATH=/opt/local/bin:/opt/local/sbin:~/bin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.

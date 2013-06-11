@@ -1,0 +1,73 @@
+# History
+hgrep() {
+  history | sed 's/^ *[0-9]* *//' | grep $1 | sort | uniq -c | sort
+}
+
+# appends your key to a server's authorized keys file
+function authme {
+  ssh $1 'cat >>.ssh/authorized_keys' <~/.ssh/id_rsa.pub
+}
+
+# Create a new directory and enter it
+function md() {
+  mkdir -p "$@" && cd "$@"
+}
+
+# Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
+# Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
+function httpcompression() {
+  encoding="$(curl -LIs -H 'User-Agent: Mozilla/5 Gecko' -H 'Accept-Encoding: gzip,deflate,compress,sdch' "$1" | grep '^Content-Encoding:')" && echo "$1 is encoded using ${encoding#* }" || echo "$1 is not using any encoding"
+}
+
+function json() {
+  python -mjson.tool <<< "$*" | pygmentize -l javascript
+}
+
+# All the dig info
+function digga() {
+  dig +nocmd "$1" any +multiline +noall +answer
+}
+
+# Solarized switchers
+function tabc {
+  NAME=$1; if [ -z "$NAME" ]; then NAME="Default"; fi
+  osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
+}
+
+function godark {
+  tabc "Solarized Dark"
+}
+
+function golight {
+  tabc "Solarized Light"
+}
+
+function tabname {
+  printf "\e]1;$1\a"
+}
+
+function winname {
+  printf "\e]2;$1\a"
+}
+
+function ntw {
+  tabname $1 && winname $1
+}
+
+# Version switchers (Courtesy Matt Lehman https://github.com/mlehman)
+# Usage:
+#   version [software-name, without version], i.e. 'version scala' returns current version
+#   versions [software-name, without version], i.e. 'versions scala' returns list of installed versions
+#   swap [software-name, without version] [new-name-with-version], i.e. 'swap scala scala-2.10.1'
+function versions() {
+    ls -d $TOOL_DIR/$1/*/ | xargs basename | sort | grep -v current
+}
+
+function version() {
+    readlink $TOOL_DIR/$1/current | xargs basename
+}
+
+function swap() {
+    rm -f $TOOL_DIR/$1/current
+    ln -s $TOOL_DIR/$1/$2 $TOOL_DIR/$1/current
+}
