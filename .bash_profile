@@ -26,7 +26,7 @@ complete -W "NSGlobalDomain" defaults
 #fi
 
 # NVM Path Setup
-#[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" # Load NVM function
+[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" # Load NVM function
 
 if [[ -s $HOME/.nvm/nvm.sh ]] ; then
     source $HOME/.nvm/nvm.sh ;
@@ -53,3 +53,5 @@ fi
 #     . /opt/local/etc/bash_completion
 # fi
 
+# Include Mutually Human tidbits Helper files
+# source ~/.tidbits/mhsrc
