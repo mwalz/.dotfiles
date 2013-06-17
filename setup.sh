@@ -16,7 +16,7 @@ function backup_dot_file() {
 }
 
 # Copy our .dotfiles files to root with links back
-for file in ~/dotfiles/.{bash_profile,bashrc,inputrc,gitconfig,slate.js}; do
+for file in ~/.dotfiles/.{bash_profile,bashrc,inputrc,gitconfig,slate.js}; do
   if [ -f "$file" ]; then
     file_name=$(basename $file)
     root_file=~/$file_name
