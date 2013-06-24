@@ -110,8 +110,11 @@ alias amq-start="$ACTIVEMQ_HOME/bin/macosx/activemq start"
 alias amq-stop="$ACTIVEMQ_HOME/bin/macosx/activemq stop"
 
 # Redis start and stop aliases
-alias redisstart="sudo redis-server /opt/local/etc/redis.conf"
-alias redisstop="sudo redis-server stop"
+# Homebrew way
+alias redisstart="redis-server /usr/local/etc/redis.conf"
+# MacPorts way
+#alias redisstart="sudo redis-server /opt/local/etc/redis.conf"
+#alias redisstop="sudo redis-server stop"
 
 # DB start and stop aliases
 # Postgres
