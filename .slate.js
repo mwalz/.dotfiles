@@ -78,12 +78,12 @@ S.bnda({
   "return:shift;alt;cmd" : mainScreenFull,
   "j:shift;cmd" : mainScreenLeft,
   "l:shift;cmd" : mainScreenRight,
-  "i:shift;cmd" : mainScreenTop,
-  ",:shift;cmd" : mainScreenBottom,
-  "u:shift;cmd" : mainScreenTopLeft,
-  "o:shift;cmd" : mainScreenTopRight,
-  "m:shift;cmd" : mainScreenBottomLeft,
-  ".:shift;cmd" : mainScreenBottomRight,
+  "i:shift;alt;cmd" : mainScreenTop,
+  ",:shift;alt;cmd" : mainScreenBottom,
+  "u:shift;alt;cmd" : mainScreenTopLeft,
+  "o:shift;alt;cmd" : mainScreenTopRight,
+  "m:shift;alt;cmd" : mainScreenBottomLeft,
+  ".:shift;alt;cmd" : mainScreenBottomRight,
 
   // Resize Bindings
   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings

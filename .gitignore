@@ -1,3 +1,4 @@
+*.DS_Store
 .extra
-*.sublime-project
-*.sublime-workspace
+dotfiles.sublime-project
+dotfiles.sublime-workspace

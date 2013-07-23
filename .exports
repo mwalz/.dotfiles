@@ -79,12 +79,12 @@ export NVM_HOME=~/.nvm
 export PATH=$PATH:$NVM_HOME/bin
 
 # Google Closure Compiler
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130411/libexec
+export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130603/libexec
 
 # Convey Setup
 export SCALABHA_DIR=$HOME/Work/projects/libraries/Scalabha
 export PATH=$PATH:$SCALABHA_DIR/bin
-export CONVEY_DIR=$HOME/Work/projects/converseon/convey
+export CONVEY_DIR=$HOME/work/sandbox/convey
 export PATH=$PATH:$CONVEY_DIR/bin
 
 # Setup Amazon EC2 Command-Line Tools
