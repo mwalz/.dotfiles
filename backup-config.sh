@@ -4,6 +4,7 @@ TIMESTAMP=`date +"%m_%d_%Y_%T"`
 BACKUP_DIR=~/"user_config_backup_"$TIMESTAMP
 
 # TODO: Script to backup other directories in the config area.
+# .dotfiles, .ssh, .gitconfig_private, .emacs.d, work?
 
 # Copy existing dot files to backup directory
 function backup_dot_file() {

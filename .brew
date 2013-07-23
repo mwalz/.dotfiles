@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 
-brew install git bash-completion mongo redis minicom tree closure-compiler
+# Add switches for installation
+
+brew install git bash-completion 
+
+brew install mysql mongo redis 
+
+brew install minicom tree tmux
+
+brew closure-compiler 
