@@ -4,8 +4,8 @@
 
 brew install git bash-completion 
 
-brew install mysql mongo redis 
+brew install mysql postgresql mongo redis
 
 brew install minicom tree tmux
 
-brew closure-compiler 
+brew install closure-compiler 

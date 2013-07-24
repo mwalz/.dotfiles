@@ -110,11 +110,7 @@ alias amq-start="$ACTIVEMQ_HOME/bin/macosx/activemq start"
 alias amq-stop="$ACTIVEMQ_HOME/bin/macosx/activemq stop"
 
 # Redis start and stop aliases
-# Homebrew way
 alias redisstart="redis-server /usr/local/etc/redis.conf"
-# MacPorts way
-#alias redisstart="sudo redis-server /opt/local/etc/redis.conf"
-#alias redisstop="sudo redis-server stop"
 
 # DB start and stop aliases
 # Postgres
@@ -122,22 +118,7 @@ alias pgstart="/opt/local/lib/postgresql91/bin/pg_ctl -D /opt/local/var/db/postg
 alias pgstop="/opt/local/lib/postgresql91/bin/pg_ctl -D /opt/local/var/db/postgresql91/defaultdb stop -s -m fast"
 
 # MySQL
-alias mystart="sudo /opt/local/share/mysql5/mysql/mysql.server start"
-alias mystop="sudo /opt/local/share/mysql5/mysql/mysql.server stop"
+alias mystart="mysql.server start"
+alias mystop="mysql.server stop"
 
-# MongoDB
-alias mongostart="sudo mongod -f /opt/local/etc/mongodb/mongod.conf"
-mongostop_func () {
-
-#  local mongopid=`ps -o pid,command -ax | grep mongod | awk '!/awk/ && !/grep/{print $1}'`;
-#  just find a simpler way
-  local mongopid=`less /opt/local/var/db/mongodb_data/mongod.lock`;
-  if [[ $mongopid =~ [[:digit:]] ]]; then
-    sudo kill -15 $mongopid;
-    echo mongod process $mongopid terminated;
-  else
-    echo mongo process $mongopid not exist;
-  fi
-}
-alias mongostop="mongostop_func"
 

@@ -2,8 +2,8 @@
 #################
 
 # Prefer US English and use UTF-8
-#export LC_ALL="en_US.UTF-8"
-export LC_ALL="C"
+export LC_ALL="en_US.UTF-8"
+#export LC_ALL="C"
 export LANG="en_US"
 # Add Homebrew paths
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
@@ -72,7 +72,7 @@ export HADOOP_INSTALL=$TOOL_DIR/hadoop/current
 export PATH=$PATH:$HADOOP_INSTALL/bin
 
 # Haskell Setup
-export PATH=$PATH:$HOME/Library/Haskell/bin
+#export PATH=$PATH:$HOME/Library/Haskell/bin
 
 # NVM and Node
 export NVM_HOME=~/.nvm
@@ -94,8 +94,3 @@ export PATH=$PATH:$AWS_RDS_HOME/bin
 # export PATH=$PATH:$EC2_HOME/bin
 # export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
 # export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
-
-# MacPorts Installer additions
-export MANPATH=/opt/local/share/man:$MANPATH
-export PATH=/opt/local/bin:/opt/local/sbin:~/bin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
