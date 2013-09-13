@@ -37,6 +37,7 @@ export GNUTERM=x11
 
 # Third party tools directory
 export TOOL_DIR=~/work/tools
+export HOME_BREW=/usr/local/bin
 
 # Java Home Setup
 export JAVA_HOME="`/usr/libexec/java_home`"
@@ -59,6 +60,13 @@ export PATH=$PATH:$AKKA_HOME/bin
 export PLAY_HOME=$TOOL_DIR/play/current
 export PATH=$PATH:$PLAY_HOME
 
+# Go Setup
+export GOPATH=$HOME_BREW/go
+export GOOS=darwin
+export GOARCH=amd64
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
 # Active MQ Setup
 export ACTIVEMQ_HOME=$TOOL_DIR/activemq/current
 export PATH=$PATH:$ACTIVEMQ_HOME
@@ -79,7 +87,7 @@ export NVM_HOME=~/.nvm
 export PATH=$PATH:$NVM_HOME/bin
 
 # Google Closure Compiler
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130722/libexec
+export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130823/libexec
 
 # Convey Setup
 #export SCALABHA_DIR=$HOME/Work/projects/libraries/Scalabha
