@@ -37,9 +37,13 @@ export GNUTERM=x11
 
 # Third party tools directory
 export TOOL_DIR=~/work/tools
+export BREW_HOME=/usr/local/bin
 
 # Java Home Setup
 export JAVA_HOME="`/usr/libexec/java_home`"
+#/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
+#/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home
+#/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/
 
 # Clojure Setup
 export PATH=$PATH:$HOME/.cljr/bin
@@ -58,6 +62,12 @@ export PATH=$PATH:$AKKA_HOME/bin
 # Play Setup
 export PLAY_HOME=$TOOL_DIR/play/current
 export PATH=$PATH:$PLAY_HOME
+
+export GOROOT=$BREW_HOME/go
+export GOOS=darwin
+export GOARCH=amd64
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
 
 # Active MQ Setup
 export ACTIVEMQ_HOME=$TOOL_DIR/activemq/current
@@ -79,12 +89,12 @@ export NVM_HOME=~/.nvm
 export PATH=$PATH:$NVM_HOME/bin
 
 # Google Closure Compiler
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130603/libexec
+export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130722/libexec
 
 # Convey Setup
-export SCALABHA_DIR=$HOME/Work/projects/libraries/Scalabha
-export PATH=$PATH:$SCALABHA_DIR/bin
-export CONVEY_DIR=$HOME/work/sandbox/convey
+#export SCALABHA_DIR=$HOME/work/projects/libraries/Scalabha
+#export PATH=$PATH:$SCALABHA_DIR/bin
+export CONVEY_DIR=$HOME/work/projects/converseon/convey
 export PATH=$PATH:$CONVEY_DIR/bin
 
 # Setup Amazon EC2 Command-Line Tools
