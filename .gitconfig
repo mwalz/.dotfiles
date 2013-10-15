@@ -5,7 +5,7 @@
 [core]
     ## autocrlf = true
     ## safecrlf = true
-    excludesfile = ~/.gitignore
+    excludesfile = /Users/markwalz/.gitignore
     attributesfile = ~/.gitattributes
     whitespace = fix,space-before-tab,tab-in-indent,trailing-space
     trustctime = false
@@ -119,3 +119,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[credential]
+	helper = osxkeychain

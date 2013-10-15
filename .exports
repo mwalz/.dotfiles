@@ -35,12 +35,22 @@ export GREP_OPTIONS="--color=auto"
 # Some GNU Settings
 export GNUTERM=x11
 
+# XML Catalog Files (required? it's part of tig)
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
+# Dynamic Load Paths in OSX
+export DYLD_LIBRARY_PATH=/usr/local/lib
+
 # Third party tools directory
 export TOOL_DIR=~/work/tools
 export HOME_BREW=/usr/local/bin
 
 # Java Home Setup
 export JAVA_HOME="`/usr/libexec/java_home`"
+
+# Android
+export ANDROID_TOOLS=/Applications/Android\ Studio.app/sdk/platform-tools/
+export PATH=$PATH:$ANDROID_TOOLS
 
 # Clojure Setup
 export PATH=$PATH:$HOME/.cljr/bin
@@ -66,6 +76,10 @@ export GOOS=darwin
 export GOARCH=amd64
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+# Gradle Home Setup
+export GRADLE_HOME=$TOOL_DIR/gradle/current
+export PATH=$PATH:$GRADLE_HOME/bin
 
 # Active MQ Setup
 export ACTIVEMQ_HOME=$TOOL_DIR/activemq/current
