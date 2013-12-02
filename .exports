@@ -46,10 +46,26 @@ export TOOL_DIR=~/work/tools
 export HOME_BREW=/usr/local/bin
 
 # Java Home Setup
-export JAVA_HOME="`/usr/libexec/java_home`"
+# export JAVA_HOME="`/usr/libexec/java_home`"
+
+# Java Home Setup
+# New Java Home set up courtesy of Paris Apostolopoulos
+# http://javapapo.blogspot.com/2013/02/multiple-java-jdks-on-your-macosx.html
+# export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
+export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
+
+alias java6='export JAVA_HOME=$JAVA_6_HOME'
+alias java7='export JAVA_HOME=$JAVA_7_HOME'
+# alias java8='export JAVA_HOME=$JAVA_8_HOME'
+
+#default java6
+export JAVA_HOME=$JAVA_6_HOME
 
 # Android
-export ANDROID_TOOLS=/Applications/Android\ Studio.app/sdk/platform-tools/
+export ANDROID_HOME=/Applications/Android\ Studio.app/sdk
+export PATH=$PATH:$ANDROID_HOME
+export ANDROID_TOOLS=/Applications/Android\ Studio.app/sdk/platform-tools
 export PATH=$PATH:$ANDROID_TOOLS
 
 # Clojure Setup
