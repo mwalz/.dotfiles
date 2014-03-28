@@ -112,7 +112,7 @@
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
 [mergetool]
-    keepBackup = true
+	keepBackup = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -121,3 +121,6 @@
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
+[user]
+	name = Mark Walz
+	email = mark.walz@onstar.com

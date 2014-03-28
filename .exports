@@ -60,7 +60,7 @@ alias java7='export JAVA_HOME=$JAVA_7_HOME'
 # alias java8='export JAVA_HOME=$JAVA_8_HOME'
 
 #default java6
-export JAVA_HOME=$JAVA_6_HOME
+export JAVA_HOME=$JAVA_7_HOME
 
 # Android
 export ANDROID_HOME=/Applications/Android\ Studio.app/sdk
@@ -117,7 +117,7 @@ export NVM_HOME=~/.nvm
 export PATH=$PATH:$NVM_HOME/bin
 
 # Google Closure Compiler
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130823/libexec
+export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20140303/libexec
 
 # Convey Setup
 #export SCALABHA_DIR=$HOME/Work/projects/libraries/Scalabha
