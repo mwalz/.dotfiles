@@ -25,11 +25,11 @@ complete -W "NSGlobalDomain" defaults
 #    source /Users/markwalz/.rvm/scripts/rvm ;
 #fi
 
-# NVM Path Setup
-[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" # Load NVM function
+# NVM Path Setup for Brew
+[[ -s "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh" # Load NVM function
 
-if [[ -s $HOME/.nvm/nvm.sh ]] ; then
-    source $HOME/.nvm/nvm.sh ;
+if [[ -s $/usr/local/opt/nvm/nvm.sh ]] ; then
+    source /usr/local/opt/nvm/nvm.sh ;
 fi
 
 # if brew

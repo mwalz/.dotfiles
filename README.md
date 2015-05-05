@@ -9,11 +9,15 @@ https://github.com/mathiasbynens/dotfiles
 Paul Irish (OS X Settings)
 https://github.com/paulirish/dotfiles
 
-Adjusted for my current OS X environment and development needs.
+Adjusted for current OS X environment and development needs.
 
-In the process (of possibly) migrating from MacPorts to Brew, so files are messy in places.
+Recently migrated to Brew for external libraries and installs.
+
+Slate has been great. Key strokes on 3 computers standardized for window manipulation.
 
 Run `setup.sh` to backup current files and copy files into place.
+
+Working on `backup-config.sh` for ongoing future backups.
 
 Thanks to Matt Lehman (https://github.com/mlehman) for the version switcher (see .functions file).
 

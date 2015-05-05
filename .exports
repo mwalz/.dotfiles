@@ -40,10 +40,19 @@ export TOOL_DIR=~/work/tools
 export BREW_HOME=/usr/local/bin
 
 # Java Home Setup
-export JAVA_HOME="`/usr/libexec/java_home`"
-#/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
-#/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home
-#/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/
+# export JAVA_HOME="`/usr/libexec/java_home`"
+
+# Java Home Setup
+# New Java Home set up courtesy of Paris Apostolopoulos
+# http://javapapo.blogspot.com/2013/02/multiple-java-jdks-on-your-macosx.html
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
+
+alias java6='export JAVA_HOME=$JAVA_6_HOME'
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+
+#default java6
+export JAVA_HOME=$JAVA_8_HOME
 
 # Clojure Setup
 export PATH=$PATH:$HOME/.cljr/bin
@@ -63,10 +72,11 @@ export PATH=$PATH:$AKKA_HOME/bin
 export PLAY_HOME=$TOOL_DIR/play/current
 export PATH=$PATH:$PLAY_HOME
 
-export GOROOT=$BREW_HOME/go
+# Go Setup
+export GOPATH=$BREW_HOME/go
 export GOOS=darwin
 export GOARCH=amd64
-export GOBIN=$GOROOT/bin
+export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
 # Active MQ Setup
@@ -85,16 +95,23 @@ export PATH=$PATH:$HADOOP_INSTALL/bin
 #export PATH=$PATH:$HOME/Library/Haskell/bin
 
 # NVM and Node
-export NVM_HOME=~/.nvm
-export PATH=$PATH:$NVM_HOME/bin
+export NVM_DIR=~/.nvm
+#export NVM_HOME=/usr/local/opt/nvm/nvm.sh
+#export PATH=$PATH:$NVM_HOME/bin
 
 # Google Closure Compiler
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20130722/libexec
+export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20141023/libexec
+
+# Docker Export for boot2docker
+#export DOCKER_HOST=tcp://localhost:2376
+#export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
+#export DOCKER_TLS_VERIFY=1
 
 # Convey Setup
-#export SCALABHA_DIR=$HOME/work/projects/libraries/Scalabha
+#export SCALABHA_DIR=$HOME/Work/projects/libraries/Scalabha
 #export PATH=$PATH:$SCALABHA_DIR/bin
 export CONVEY_DIR=$HOME/work/projects/converseon/convey
+#export CONVEY_DIR=$HOME/work/sandbox/convey
 export PATH=$PATH:$CONVEY_DIR/bin
 
 # Setup Amazon EC2 Command-Line Tools

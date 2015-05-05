@@ -110,7 +110,8 @@ alias amq-start="$ACTIVEMQ_HOME/bin/macosx/activemq start"
 alias amq-stop="$ACTIVEMQ_HOME/bin/macosx/activemq stop"
 
 # Redis start and stop aliases
-alias redisstart="redis-server /usr/local/etc/redis.conf"
+alias redisstart="launchctl load /usr/local/opt/redis/homebrew.mxcl.redis.plist"
+alias redisstop="launchctl unload /usr/local/opt/redis/homebrew.mxcl.redis.plist"
 
 # DB start and stop aliases
 # Postgres
@@ -121,4 +122,7 @@ alias pgstop="/opt/local/lib/postgresql91/bin/pg_ctl -D /opt/local/var/db/postgr
 alias mystart="mysql.server start"
 alias mystop="mysql.server stop"
 
+# Mongo
+alias mongostart="mongod --config /usr/local/etc/mongod.conf --fork"
+alias mongostop="mongo admin --eval 'db.shutdownServer()'"
 
