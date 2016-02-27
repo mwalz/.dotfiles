@@ -125,3 +125,6 @@
 	required = true
 [credential]
 	helper = osxkeychain
+[user]
+	name = Mark Walz
+	email = mark.walz@fluentconsulting.com

@@ -1,3 +1,8 @@
+# Oh Mac OS X, why do you limit this?
+# Fix for open file limit
+ulimit -n 2048
+ulimit -u 1024
+
 # Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.dotfiles/.{bash_prompt,exports,aliases,functions,extra}; do

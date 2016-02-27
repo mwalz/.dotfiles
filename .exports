@@ -36,10 +36,10 @@ export GREP_OPTIONS="--color=auto"
 export GNUTERM=x11
 
 # XML Catalog Files (required? it's part of tig)
-export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+#export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
 # Dynamic Load Paths in OSX
-export DYLD_LIBRARY_PATH=/usr/local/lib
+#export DYLD_LIBRARY_PATH=/usr/local/lib
 
 # Third party tools directory
 export TOOL_DIR=~/work/tools
@@ -57,12 +57,12 @@ export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
 alias java6='export JAVA_HOME=$JAVA_6_HOME'
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
 
-#default java6
+#default java8
 export JAVA_HOME=$JAVA_8_HOME
 
 # Android
-export ANDROID_TOOLS=/Applications/Android\ Studio.app/sdk/platform-tools/
-export PATH=$PATH:$ANDROID_TOOLS
+#export ANDROID_TOOLS=/Applications/Android\ Studio.app/sdk/platform-tools/
+#export PATH=$PATH:$ANDROID_TOOLS
 
 # Clojure Setup
 export PATH=$PATH:$HOME/.cljr/bin
@@ -71,39 +71,36 @@ export PATH=$PATH:$HOME/.cljr/bin
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2048M"
 
 # Scala Setup
-export SCALA_HOME=$TOOL_DIR/scala/current
-export PATH=$PATH:$SCALA_HOME/bin
+#export SCALA_HOME=$TOOL_DIR/scala/current
+#export PATH=$PATH:$SCALA_HOME/bin
 
 # Akka Setup
-export AKKA_HOME=$TOOL_DIR/akka/current
-export PATH=$PATH:$AKKA_HOME/bin
+#export AKKA_HOME=$TOOL_DIR/akka/current
+#export PATH=$PATH:$AKKA_HOME/bin
 
 # Play Setup
-export PLAY_HOME=$TOOL_DIR/play/current
-export PATH=$PATH:$PLAY_HOME
+#export PLAY_HOME=$TOOL_DIR/play/current
+#export PATH=$PATH:$PLAY_HOME
 
 # Go Setup
 export GOPATH=$BREW_HOME/go
-export GOOS=darwin
-export GOARCH=amd64
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOPATH/bin
 
 # Gradle Home Setup
-export GRADLE_HOME=$TOOL_DIR/gradle/current
-export PATH=$PATH:$GRADLE_HOME/bin
+#export GRADLE_HOME=$TOOL_DIR/gradle/current
+#export PATH=$PATH:$GRADLE_HOME/bin
 
 # Active MQ Setup
-export ACTIVEMQ_HOME=$TOOL_DIR/activemq/current
-export PATH=$PATH:$ACTIVEMQ_HOME
+#export ACTIVEMQ_HOME=$TOOL_DIR/activemq/current
+#export PATH=$PATH:$ACTIVEMQ_HOME
 
 # Mallet Setup
-export MALLET_HOME=$TOOL_DIR/mallet/current
-export PATH=$PATH:$MALLET_HOME/bin
+#export MALLET_HOME=$TOOL_DIR/mallet/current
+#export PATH=$PATH:$MALLET_HOME/bin
 
 # Hadoop Setup
-export HADOOP_INSTALL=$TOOL_DIR/hadoop/current
-export PATH=$PATH:$HADOOP_INSTALL/bin
+#export HADOOP_INSTALL=$TOOL_DIR/hadoop/current
+#export PATH=$PATH:$HADOOP_INSTALL/bin
 
 # Haskell Setup
 #export PATH=$PATH:$HOME/Library/Haskell/bin
@@ -129,8 +126,8 @@ export CONVEY_DIR=$HOME/work/projects/converseon/convey
 export PATH=$PATH:$CONVEY_DIR/bin
 
 # Setup Amazon EC2 Command-Line Tools
-export AWS_RDS_HOME=$TOOL_DIR/RDSCli-1.8.002
-export PATH=$PATH:$AWS_RDS_HOME/bin
+#export AWS_RDS_HOME=$TOOL_DIR/RDSCli-1.8.002
+#export PATH=$PATH:$AWS_RDS_HOME/bin
 # export EC2_HOME=~/.ec2
 # export PATH=$PATH:$EC2_HOME/bin
 # export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`

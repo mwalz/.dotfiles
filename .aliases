@@ -115,8 +115,8 @@ alias redisstop="launchctl unload /usr/local/opt/redis/homebrew.mxcl.redis.plist
 
 # DB start and stop aliases
 # Postgres
-alias pgstart="/opt/local/lib/postgresql91/bin/pg_ctl -D /opt/local/var/db/postgresql91/defaultdb -l logfile start"
-alias pgstop="/opt/local/lib/postgresql91/bin/pg_ctl -D /opt/local/var/db/postgresql91/defaultdb stop -s -m fast"
+alias pgstart="/usr/local/opt/postgresql/bin/pg_ctl -D /usr/local/var/postgres -l logfile start"
+alias pgstop="/usr/local/opt/postgresql/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # MySQL
 alias mystart="mysql.server start"
@@ -125,4 +125,3 @@ alias mystop="mysql.server stop"
 # Mongo
 alias mongostart="mongod --config /usr/local/etc/mongod.conf --fork"
 alias mongostop="mongo admin --eval 'db.shutdownServer()'"
-
