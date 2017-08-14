@@ -1,3 +1,8 @@
+# Oh Mac OS X, why do you limit this?
+# Fix for open file limit
+ulimit -n 2048
+ulimit -u 1024
+
 # Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.dotfiles/.{bash_prompt,exports,aliases,functions,extra}; do
@@ -17,13 +22,6 @@ shopt -s histappend
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
-
-# RVM path setup
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-#
-#if [[ -s /Users/markwalz/.rvm/scripts/rvm ]] ; then
-#    source /Users/markwalz/.rvm/scripts/rvm ;
-#fi
 
 # NVM Path Setup for Brew
 [[ -s "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh" # Load NVM function

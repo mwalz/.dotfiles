@@ -29,6 +29,9 @@ alias thumb="df -lH | grep '/Volumes/*' |  tr -s ' ' | cut -d ' ' -f 9"
 alias mvt="thumb | xargs mv $1"
 alias ejt="thumb | xargs hdiutil detach"
 
+# Restart Camera
+alias camerakick="sudo killall VDCAssistant"
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
@@ -37,7 +40,7 @@ alias whois="whois -h whois-servers.net"
 alias hosts="cat /etc/hosts"
 
 # Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
+alias dnsflush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo 'DNS Cache Flushed'"
 vpn_func () {
   sudo ifconfig en1 down;
   sudo route flush;
@@ -115,8 +118,8 @@ alias redisstop="launchctl unload /usr/local/opt/redis/homebrew.mxcl.redis.plist
 
 # DB start and stop aliases
 # Postgres
-alias pgstart="/opt/local/lib/postgresql91/bin/pg_ctl -D /opt/local/var/db/postgresql91/defaultdb -l logfile start"
-alias pgstop="/opt/local/lib/postgresql91/bin/pg_ctl -D /opt/local/var/db/postgresql91/defaultdb stop -s -m fast"
+alias pgstart="/usr/local/opt/postgresql/bin/pg_ctl -D /usr/local/var/postgres -l logfile start"
+alias pgstop="/usr/local/opt/postgresql/bin/pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # MySQL
 alias mystart="mysql.server start"
@@ -125,4 +128,3 @@ alias mystop="mysql.server stop"
 # Mongo
 alias mongostart="mongod --config /usr/local/etc/mongod.conf --fork"
 alias mongostop="mongo admin --eval 'db.shutdownServer()'"
-

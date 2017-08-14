@@ -1,9 +1,13 @@
 # History
+# hgrep() {
+#  history | sed 's/^ *[0-9]* *//' | grep $1 | sort | uniq -c | sort
+#}
+
 hgrep() {
-  history | sed 's/^ *[0-9]* *//' | grep $1 | sort | uniq -c | sort
+  history | grep $1 | sort -k 2 | uniq -c -f 1 | sort
 }
 
-# appends your key to a server's authorized keys file
+# Appends your key to a server's authorized keys file
 function authme {
   ssh $1 'cat >>.ssh/authorized_keys' <~/.ssh/id_rsa.pub
 }
@@ -23,12 +27,8 @@ function json() {
   python -mjson.tool <<< "$*" | pygmentize -l javascript
 }
 
-# All the dig info
-function digga() {
-  dig +nocmd "$1" any +multiline +noall +answer
-}
-
 # Solarized switchers
+# tabc changes Terminal settings on the current tab
 function tabc {
   NAME=$1; if [ -z "$NAME" ]; then NAME="Default"; fi
   osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
@@ -42,14 +42,17 @@ function golight {
   tabc "Solarized Light"
 }
 
+# OS X Terminal, change the tab name
 function tabname {
   printf "\e]1;$1\a"
 }
 
+# OS X Terminal, change the window name
 function winname {
   printf "\e]2;$1\a"
 }
 
+# OS X Terminal, change the tab and window name
 function ntw {
   tabname $1 && winname $1
 }

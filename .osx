@@ -13,10 +13,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Mole-Machine"
-sudo scutil --set HostName "Mole-Machine"
-sudo scutil --set LocalHostName "Mole-Machine"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Mole-Machine"
+sudo scutil --set ComputerName "NAMEHERE"
+sudo scutil --set HostName "NAMEHERE"
+sudo scutil --set LocalHostName "NAMEHERE"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "pd-mwalz"
 
 # Set standby delay to 24 hours (default is 1 hour)
 #sudo pmset -a standbydelay 86400
@@ -169,6 +169,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 2
 # defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+
+# Speed up mouse more than System Preferences allows
+defaults write -g com.apple.mouse.scaling  5.0
 
 # Disable “natural” (Lion-style) scrolling
 #defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false

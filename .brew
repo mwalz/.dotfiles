@@ -2,10 +2,8 @@
 
 # Add switches for installation
 
-brew install git bash-completion 
+brew install git bash-completion
 
 brew install mysql postgresql mongo redis
 
 brew install minicom tree tmux
-
-brew install closure-compiler 
