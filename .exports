@@ -24,7 +24,6 @@ export HISTIGNORE='&:ls:[bf]g:exit'
 shopt -s histappend
 set cmdhist
 
-
 export HISTTIMEFORMAT='%h/%d/%y – %H:%M:%S: '
 #export HISTCONTROL=ignoreboth
 # export HISTSIZE=5000
@@ -52,25 +51,25 @@ export GNUTERM=x11
 export TOOL_DIR=~/work/tools
 export BREW_HOME=/usr/local/bin
 
-export TWEDDLE_ANSIBLE=~/work/projects/ansible-base
-export ANSIBLE_CONFIG=~/work/projects/ansible-base/ansible.cfg
+# Python auto complete setup
+export PYTHONSTARTUP=~/.pythonrc
 
 # Java Home Setup
-# export JAVA_HOME="`/usr/libexec/java_home`"
+#export JAVA_HOME="`/usr/libexec/java_home`"
 
 # Java Home Setup
 # New Java Home set up courtesy of Paris Apostolopoulos
 # http://javapapo.blogspot.com/2013/02/multiple-java-jdks-on-your-macosx.html
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
+#export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+#export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
 #export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
 
 #alias java6='export JAVA_HOME=$JAVA_6_HOME'
-alias java7='export JAVA_HOME=$JAVA_7_HOME'
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
+#alias java7='export JAVA_HOME=$JAVA_7_HOME'
+#alias java8='export JAVA_HOME=$JAVA_8_HOME'
 
 #default java8
-export JAVA_HOME=$JAVA_8_HOME
+#export JAVA_HOME=$JAVA_8_HOME
 
 # Open Dita Setup
 export DITA_HOME=$TOOL_DIR/dita-ot/current
@@ -99,7 +98,7 @@ export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2048M"
 #export PATH=$PATH:$PLAY_HOME
 
 # Go Setup
-export GOPATH=$BREW_HOME/go
+export GOPATH=$HOME/work/go
 export PATH=$PATH:$GOPATH/bin
 
 # Gradle Home Setup
@@ -123,11 +122,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # NVM and Node
 export NVM_DIR=~/.nvm
-#export NVM_HOME=/usr/local/opt/nvm/nvm.sh
-#export PATH=$PATH:$NVM_HOME/bin
-
-# Docker Setup
-
 
 # Google Closure Compiler
 #export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20141023/libexec

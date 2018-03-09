@@ -74,3 +74,19 @@ function swap() {
     rm -f $TOOL_DIR/$1/current
     ln -s $TOOL_DIR/$1/$2 $TOOL_DIR/$1/current
 }
+
+# Function that takes an array of keys. Called via:
+#   array=("one" "two" "three")
+#   addsshkeys "${array[@]}"
+function addsshkeys() {
+  sshkeys=("$@")
+  currentsshkeys=($(ssh-add -l | awk '{print $3}' | sed 's!.*/!!'))
+
+  for i in "${currentsshkeys[@]}"; do
+    sshkeys=(${sshkeys[@]//*$i*})
+  done
+
+  for i in "${sshkeys[@]}"; do
+    ssh-add ~/.ssh/$i
+  done
+}

@@ -60,9 +60,6 @@
     # +rreview+ shows changes in your local branch that its remote branch does not have
     rreview = !"git log `git rbranch`..`git cbranch`"
 
-    # +anim+ - lists branches merged into acceptance that are not in master. (anim == acceptance not in master)
-    anim = !"echo 'Branches merged into acceptance that are not in master:' && git log master..acceptance | grep -i 'Merge branch'"
-
     # +pushr+ - pushes the current branch to the remote origin
     pushr = !"git push --set-upstream origin `git cbranch`"
     ## END Mutually Human GIT Scripts ##
