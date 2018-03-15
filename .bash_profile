@@ -60,3 +60,4 @@ fi
 
 # Include Mutually Human tidbits Helper files
 # source ~/.tidbits/mhsrc
+export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
