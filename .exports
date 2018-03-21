@@ -2,9 +2,10 @@
 #################
 
 # Prefer US English and use UTF-8
+export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 #export LC_ALL="C"
-export LANG="en_US"
+
 # Add Homebrew paths
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 #export PATH=~/bin:$PATH
@@ -19,16 +20,11 @@ export MANPAGER="less -X"
 export HISTSIZE=1000000
 export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE='&:ls:[bf]g:exit'
-#export HISTIGNORE="cd *:[bf]g:exit:pwd:date:clear:mount:umount"
-#export HISTTIMEFORMAT='%b %d %H:%M:%S: '
+export HISTTIMEFORMAT='%h/%d/%y – %H:%M:%S –> '
+
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER "$(history 1)" >> ~/.bash_eternal_history'
 shopt -s histappend
 set cmdhist
-
-export HISTTIMEFORMAT='%h/%d/%y – %H:%M:%S: '
-#export HISTCONTROL=ignoreboth
-# export HISTSIZE=5000
-#shopt -s histappend
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER "$(history 1)" >> ~/.bash_eternal_history'
 
 export LESS="--RAW-CONTROL-CHARS"
 export CLICOLOR=1
@@ -40,12 +36,6 @@ export GREP_OPTIONS="--color=auto"
 
 # Some GNU Settings
 export GNUTERM=x11
-
-# XML Catalog Files (required? it's part of tig)
-#export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
-
-# Dynamic Load Paths in OSX
-#export DYLD_LIBRARY_PATH=/usr/local/lib
 
 # Third party tools directory
 export TOOL_DIR=~/work/tools
@@ -80,7 +70,7 @@ export PATH=$PATH:$DITA_HOME/bin
 #export PATH=$PATH:$ANDROID_TOOLS
 
 # Clojure Setup
-export PATH=$PATH:$HOME/.cljr/bin
+#export PATH=$PATH:$HOME/.cljr/bin
 
 # SBT Setup
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2048M"

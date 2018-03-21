@@ -68,12 +68,16 @@ alias c="tr -d '\n' | pbcopy"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Documents/"
+alias dd="cd ~/Downloads/"
 alias p="cd ~/work/projects"
 alias g="git"
 alias v="vim"
 alias sublime='open -a "Sublime Text 2"'
+alias vscode='open -a "Visual Studio Code"'
 alias em="open -a /Applications/Emacs.app"
+
+alias bupdate='brew update && brew upgrade && brew cleanup'
 
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
@@ -89,10 +93,9 @@ alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && kil
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-# Disable Spotlight
-alias spotoff="sudo mdutil -a -i off"
-# Enable Spotlight
+# Enable/Disable Spotlight
 alias spoton="sudo mdutil -a -i on"
+alias spotoff="sudo mdutil -a -i off"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done

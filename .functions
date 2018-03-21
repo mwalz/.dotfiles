@@ -24,7 +24,7 @@ function httpcompression() {
 }
 
 function json() {
-  python -mjson.tool <<< "$*" | pygmentize -l javascript
+  python3 -mjson.tool "$*" | pygmentize -l javascript
 }
 
 # Solarized switchers

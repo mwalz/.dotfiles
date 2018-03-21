@@ -3,13 +3,6 @@
 ulimit -n 2048
 ulimit -u 1024
 
-# Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
-# ~/.extra can be used for settings you don’t want to commit
-for file in ~/.dotfiles/.{bash_prompt,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && source "$file"
-done
-unset file
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -36,5 +29,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-# NVM Path Setup for Brew
-[[ -s "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh" # Load NVM function
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
