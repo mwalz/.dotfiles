@@ -29,6 +29,9 @@ alias thumb="df -lH | grep '/Volumes/*' |  tr -s ' ' | cut -d ' ' -f 9"
 alias mvt="thumb | xargs mv $1"
 alias ejt="thumb | xargs hdiutil detach"
 
+# Restart Camera
+alias camerakick="sudo killall VDCAssistant"
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
@@ -37,7 +40,7 @@ alias whois="whois -h whois-servers.net"
 alias hosts="cat /etc/hosts"
 
 # Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
+alias dnsflush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo 'DNS Cache Flushed'"
 vpn_func () {
   sudo ifconfig en1 down;
   sudo route flush;

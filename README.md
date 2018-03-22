@@ -1,8 +1,7 @@
 Mark Walz's .dotfiles
 ====================
 
-
-Largely based on: 
+Largely based on:
 Mathias Bynens (most everything)
 https://github.com/mathiasbynens/dotfiles
 
@@ -21,3 +20,6 @@ Working on `backup-config.sh` for ongoing future backups.
 
 Thanks to Matt Lehman (https://github.com/mlehman) for the version switcher (see .functions file).
 
+Also see: http://www.mitchchn.me/2014/and-eight-hundred-more/
+
+That includes a useful ssh trick and some textutil info.

@@ -17,12 +17,18 @@ export MANPAGER="less -X"
 
 # Bash History Options
 export HISTSIZE=1000000
-export HISTCONTROL='ignoreboth'
+export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE='&:ls:[bf]g:exit'
 #export HISTIGNORE="cd *:[bf]g:exit:pwd:date:clear:mount:umount"
-export HISTTIMEFORMAT='%b %d %H:%M:%S: '
+#export HISTTIMEFORMAT='%b %d %H:%M:%S: '
 shopt -s histappend
 set cmdhist
+
+export HISTTIMEFORMAT='%h/%d/%y – %H:%M:%S: '
+#export HISTCONTROL=ignoreboth
+# export HISTSIZE=5000
+#shopt -s histappend
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER "$(history 1)" >> ~/.bash_eternal_history'
 
 export LESS="--RAW-CONTROL-CHARS"
 export CLICOLOR=1
@@ -45,20 +51,29 @@ export GNUTERM=x11
 export TOOL_DIR=~/work/tools
 export BREW_HOME=/usr/local/bin
 
+# Python auto complete setup
+export PYTHONSTARTUP=~/.pythonrc
+
 # Java Home Setup
-# export JAVA_HOME="`/usr/libexec/java_home`"
+#export JAVA_HOME="`/usr/libexec/java_home`"
 
 # Java Home Setup
 # New Java Home set up courtesy of Paris Apostolopoulos
 # http://javapapo.blogspot.com/2013/02/multiple-java-jdks-on-your-macosx.html
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
+#export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+#export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
+#export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
 
-alias java6='export JAVA_HOME=$JAVA_6_HOME'
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
+#alias java6='export JAVA_HOME=$JAVA_6_HOME'
+#alias java7='export JAVA_HOME=$JAVA_7_HOME'
+#alias java8='export JAVA_HOME=$JAVA_8_HOME'
 
 #default java8
 export JAVA_HOME=$JAVA_8_HOME
+
+# Open Dita Setup
+export DITA_HOME=$TOOL_DIR/dita-ot/current
+export PATH=$PATH:$DITA_HOME/bin
 
 # Android
 #export ANDROID_TOOLS=/Applications/Android\ Studio.app/sdk/platform-tools/
@@ -83,7 +98,7 @@ export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2048M"
 #export PATH=$PATH:$PLAY_HOME
 
 # Go Setup
-export GOPATH=$BREW_HOME/go
+export GOPATH=$HOME/work/go
 export PATH=$PATH:$GOPATH/bin
 
 # Gradle Home Setup
@@ -107,28 +122,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # NVM and Node
 export NVM_DIR=~/.nvm
-#export NVM_HOME=/usr/local/opt/nvm/nvm.sh
-#export PATH=$PATH:$NVM_HOME/bin
 
 # Google Closure Compiler
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20141023/libexec
-
-# Docker Export for boot2docker
-#export DOCKER_HOST=tcp://localhost:2376
-#export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
-#export DOCKER_TLS_VERIFY=1
-
-# Convey Setup
-#export SCALABHA_DIR=$HOME/Work/projects/libraries/Scalabha
-#export PATH=$PATH:$SCALABHA_DIR/bin
-export CONVEY_DIR=$HOME/work/projects/converseon/convey
-#export CONVEY_DIR=$HOME/work/sandbox/convey
-export PATH=$PATH:$CONVEY_DIR/bin
-
-# Setup Amazon EC2 Command-Line Tools
-#export AWS_RDS_HOME=$TOOL_DIR/RDSCli-1.8.002
-#export PATH=$PATH:$AWS_RDS_HOME/bin
-# export EC2_HOME=~/.ec2
-# export PATH=$PATH:$EC2_HOME/bin
-# export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
-# export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+#export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20141023/libexec

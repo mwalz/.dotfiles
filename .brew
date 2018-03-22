@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-# Add switches for installation
+# Base brew installations, varies by machine
 
-brew install git bash-completion 
+# basics
+brew install git bash-completion
 
+# development
 brew install mysql postgresql mongo redis
+brew install go nvm python 
 
-brew install minicom tree tmux
-
-brew install closure-compiler 
+# extras
+brew install minicom tree tmux archey pandoc
