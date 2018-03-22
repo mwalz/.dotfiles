@@ -6,6 +6,13 @@ for file in ~/.dotfiles/.{bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+# Add SSH keys to ssh-agent 
+# See functions file for base function
+# Client specific setups are in extra, where `setupssh` is called with a list of keys
+if typeset -f setupssh > /dev/null ; then
+  setupssh
+fi
+
 # FROM: http://www.growingwiththeweb.com/2018/01/slow-nvm-init.html
 # Defer initialization of nvm until nvm, node or a node-dependent command is
 # run. Ensure this block is only run once if .bashrc gets sourced multiple times
