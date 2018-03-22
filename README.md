@@ -1,6 +1,8 @@
 Mark Walz's .dotfiles
 ====================
 
+Updated 2018-03-21
+
 Largely based on:
 Mathias Bynens (most everything)
 https://github.com/mathiasbynens/dotfiles
@@ -9,10 +11,6 @@ Paul Irish (OS X Settings)
 https://github.com/paulirish/dotfiles
 
 Adjusted for current OS X environment and development needs.
-
-Recently migrated to Brew for external libraries and installs.
-
-Slate has been great. Key strokes on 3 computers standardized for window manipulation.
 
 Run `setup.sh` to backup current files and copy files into place.
 
