@@ -2,9 +2,10 @@
 #################
 
 # Prefer US English and use UTF-8
-export LANG="en_US"
-export LC_ALL="en_US.UTF-8"
-#export LC_ALL="C"
+#export LANG="en_US"
+#export LC_ALL="en_US.UTF-8"
+export LANG="C"
+export LC_ALL="C"
 
 # Add Homebrew paths
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
