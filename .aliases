@@ -79,6 +79,10 @@ alias em="open -a /Applications/Emacs.app"
 
 alias bupdate='brew update && brew upgrade && brew cleanup'
 
+# Lazy Date Stuff (day of year and week of year)
+alias doy='date +%j'
+alias woy='date +%V'
+
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
